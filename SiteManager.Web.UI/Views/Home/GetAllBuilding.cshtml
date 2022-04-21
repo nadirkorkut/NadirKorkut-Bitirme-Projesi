@@ -1,0 +1,21 @@
+﻿@model IEnumerable<BuildingDto>
+
+<table class="table table-dark table-hover">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Bina Adı</th>
+            <th scope="col">Toplam Daire Sayısı</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var building in Model)
+        {
+            <tr>
+                <th scope="row">@building.Id</th>
+                <td>@building.BuildingName</td>
+                <td>@building.NumberOfFlats</td>
+            </tr>
+        }
+    </tbody>
+</table>

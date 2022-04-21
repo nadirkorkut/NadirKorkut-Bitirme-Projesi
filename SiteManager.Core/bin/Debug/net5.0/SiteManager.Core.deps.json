@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "SiteManager.Core/1.0.0": {
+        "runtime": {
+          "SiteManager.Core.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "SiteManager.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

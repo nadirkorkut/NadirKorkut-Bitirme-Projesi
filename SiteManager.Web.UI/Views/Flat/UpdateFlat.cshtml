@@ -1,0 +1,37 @@
+﻿@model UpdateFlatDto
+
+<form asp-controller="Flat" asp-action="UpdateFlat" method="post">
+    <div class="form-group">
+        <label asp-for="BuildingId" class="control-label">Blok Adı</label>
+        <select asp-for="BuildingId" class="form-control" required
+                asp-items="@(new SelectList(Model.Building, "Id", "BuildingName"))">
+            <option>Lütfen birini seçiniz</option>
+        </select>
+        <span asp-validation-for="BuildingId" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="FlatNumber" class="control-label">Daire Numarası</label>
+        <input type="text" asp-for="FlatNumber" class="form-control" />
+        <span asp-validation-for="FlatNumber" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="UserId" class="control-label">Daire Sahibi</label>
+        <select asp-for="UserId" class="form-control" required
+                asp-items="@(new SelectList(Model.Users, "Id", "UserName"))">
+            <option>Lütfen birini seçiniz</option>
+        </select>
+        <span asp-validation-for="UserId" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="TypeOfFlat" class="control-label">Daire Tipi</label>
+        <input type="text" asp-for="TypeOfFlat" class="form-control" />
+        <span asp-validation-for="TypeOfFlat" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="IsEmpty" class="control-label">Daire Durumu</label>
+        <input type="text" asp-for="IsEmpty" class="form-control" />
+        <span asp-validation-for="IsEmpty" class="text-danger"></span>
+    </div>
+    <input type="hidden" asp-for="Id"/>
+    <button type="submit" class="btn btn-success">Güncelle</button>
+</form>

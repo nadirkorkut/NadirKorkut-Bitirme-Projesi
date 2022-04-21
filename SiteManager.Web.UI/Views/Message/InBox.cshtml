@@ -1,0 +1,30 @@
+﻿@model ICollection<MessageDto>
+
+<div>
+    <h3>Gelen Kutusu</h3>
+</div>
+
+<table class="table table-dark table-hover">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Mesaj</th>
+            <th scope="col">Gönderen</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var message in Model)
+        {
+            <tr>
+                <td>@message.Id</td>
+                <td>@message.MessageText</td>
+                <td>@message.Sender</td>
+                <td>
+                    <a class="btn btn-danger" asp-controller="Message" asp-action="DeleteMessageInBox" asp-route-id="@message.Id">
+                        Sil
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,15 @@
+﻿@model BuildingDto
+
+<form asp-controller="Building" asp-action="AddBuilding" method="post">
+    <div class="form-group">
+        <label asp-for="BuildingName" class="control-label">Blok Adı</label>
+        <input type="text" asp-for="BuildingName" class="form-control" />
+        <span asp-validation-for="BuildingName" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="NumberOfFlats" class="control-label">Toplam Daire Sayısı</label>
+        <input type="text" asp-for="NumberOfFlats" class="form-control" />
+        <span asp-validation-for="NumberOfFlats" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-success">Ekle</button>
+</form>

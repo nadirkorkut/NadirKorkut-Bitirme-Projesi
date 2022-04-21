@@ -1,0 +1,12 @@
+C:\Users\testinium\source\repos\SiteManager\SiteManager.Core\bin\Debug\net5.0\SiteManager.Core.deps.json
+C:\Users\testinium\source\repos\SiteManager\SiteManager.Core\bin\Debug\net5.0\SiteManager.Core.dll
+C:\Users\testinium\source\repos\SiteManager\SiteManager.Core\bin\Debug\net5.0\SiteManager.Core.pdb
+C:\Users\testinium\source\repos\SiteManager\SiteManager.Core\obj\Debug\net5.0\SiteManager.Core.csproj.AssemblyReference.cache
+C:\Users\testinium\source\repos\SiteManager\SiteManager.Core\obj\Debug\net5.0\SiteManager.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\testinium\source\repos\SiteManager\SiteManager.Core\obj\Debug\net5.0\SiteManager.Core.AssemblyInfoInputs.cache
+C:\Users\testinium\source\repos\SiteManager\SiteManager.Core\obj\Debug\net5.0\SiteManager.Core.AssemblyInfo.cs
+C:\Users\testinium\source\repos\SiteManager\SiteManager.Core\obj\Debug\net5.0\SiteManager.Core.csproj.CoreCompileInputs.cache
+C:\Users\testinium\source\repos\SiteManager\SiteManager.Core\obj\Debug\net5.0\SiteManager.Core.dll
+C:\Users\testinium\source\repos\SiteManager\SiteManager.Core\obj\Debug\net5.0\refint\SiteManager.Core.dll
+C:\Users\testinium\source\repos\SiteManager\SiteManager.Core\obj\Debug\net5.0\SiteManager.Core.pdb
+C:\Users\testinium\source\repos\SiteManager\SiteManager.Core\obj\Debug\net5.0\ref\SiteManager.Core.dll

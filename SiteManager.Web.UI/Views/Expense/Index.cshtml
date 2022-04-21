@@ -1,0 +1,56 @@
+﻿@model ICollection<ExpenseDto>
+
+<div>
+    <a class="btn btn-success" asp-action="AddExpense" asp-controller="Expense">Yeni Gider Ekle</a>
+</div>
+<br />
+
+<table class="table table-dark table-hover">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Kullanıcı Adı</th>
+            <th scope="col">Daire Numarası</th>
+            <th scope="col">Gider Tipi</th>
+            <th scope="col">Gider Fiyatı</th>
+            <th scope="col">Son Ödeme Tarihi</th>
+            <th scope="col">Ödeme Bilgisi</th>
+            <th scope="col">İşlemler</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var expense in Model)
+        {
+            <tr>
+                <th scope="row">@expense.Id</th>
+                <th>@expense.UserName</th>
+                <th>@expense.FlatNumber</th>
+                <th>@expense.TypeName</th>
+                <th>@expense.Price</th>
+                <th>@expense.InvoiceDate.ToString("dd.MM.yyyy")</th>
+                <th>
+                    @if (expense.IsPayment)
+                    {
+                        <span class="badge badge-pill badge-success"><i class="fa fa-check-circle"></i></span>
+                    }
+                    else
+                    {
+                        <a class="btn btn-success" asp-controller="Expense" asp-action="PaymentExpense" asp-route-id="@expense.Id">
+                            Öde
+                        </a>
+                    }
+                </th>
+                <td>
+                    <a class="btn btn-warning" asp-controller="Expense" asp-action="UpdateExpense" asp-route-id="@expense.Id">
+                        Güncelle
+                    </a>
+                </td>
+                <td>
+                    <a class="btn btn-danger" asp-controller="Expense" asp-action="DeleteExpense" asp-route-id="@expense.Id">
+                        Sil
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

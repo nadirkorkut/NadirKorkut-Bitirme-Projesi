@@ -1,0 +1,49 @@
+﻿@model ICollection<FlatDto>
+
+<div>
+    <a class="btn btn-success" asp-action="AddFlat" asp-controller="Flat">Yeni Daire Ekle</a>
+</div>
+<br />
+
+<table class="table table-dark table-hover">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">Blok Bilgisi</th>
+            <th scope="col">Daire Numarası</th>
+            <th scope="col">Daire Sahibi</th>
+            <th scope="col">Daire Tipi</th>
+            <th scope="col">Daire Durumu</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var flat in Model)
+        {
+            <tr>
+                <td>@flat.BuildingName</td>
+                <td>@flat.FlatNumber</td>
+                <td>@flat.UserName</td>
+                <td>@flat.TypeOfFlat</td>
+                <td>
+                    @if (flat.IsEmpty)
+                    {
+                        <span>Dolu</span>
+                    }
+                    else
+                    {
+                       <span>Boş</span> 
+                    }
+                </td>
+                 <td>
+                    <a class="btn btn-warning" asp-controller="Flat" asp-action="UpdateFlat" asp-route-id="@flat.Id">
+                        Güncelle
+                    </a>
+                </td>
+                <td>
+                    <a class="btn btn-danger" asp-controller="Flat" asp-action="DeleteFlat" asp-route-id="@flat.Id">
+                        Sil
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

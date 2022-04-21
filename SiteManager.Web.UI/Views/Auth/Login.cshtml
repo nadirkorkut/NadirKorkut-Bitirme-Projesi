@@ -1,0 +1,50 @@
+﻿@model LoginDto
+@{
+    Layout = "_LayoutEmpty";
+}
+<div class="container-scroller">
+    <div class="container-fluid page-body-wrapper full-page-wrapper">
+        <div class="content-wrapper d-flex align-items-center auth">
+            <div class="row flex-grow">
+                <div class="col-lg-4 mx-auto">
+                    <div class="auth-form-light text-left p-5">
+                        <h4>Hoşgeldiniz! Devam Etmek İçin Lütfen Giriş Yapınız.</h4>
+                        <form asp-controller="Auth" asp-action="Login" method="post">
+                            @Html.HiddenFor(p=>p.ReturnURL)
+                            <div class="card">
+                                <div class="card-body">
+                                    @if (!ViewContext.ModelState.IsValid)
+                                    {
+                                        @Html.ValidationSummary()
+                                    }
+                                    <div class="form-row">
+                                        <div class="col-12 form-group">
+                                            <label asp-for="Email"></label>
+                                            <input asp-for="Email" class="form-control" />
+                                            <span asp-validation-for="Email" class="text-danger"></span>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="col-12 form-group">
+                                            <label asp-for="Password" class="control-label"></label>
+                                            <input type="password" asp-for="Password" class="form-control" />
+                                            <span asp-validation-for="Password" class="text-danger"></span>
+                                        </div>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">Giriş Yap</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+    <script src="~/assets/css"></script>
+    <script src="~/assets/js"></script>
+    }
+
+
